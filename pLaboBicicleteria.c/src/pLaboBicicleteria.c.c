@@ -50,11 +50,12 @@ int main(void)
 			        printf("\t5.Listar Servicios \n");
 			        printf("\t6.Total\n");
 			        printf("\t7.lista bicis hardcodeadas\n");
+			        printf("\t8.Ordenar por marca de bici\n");
 			        printf("\t0.SALIR\n");
 			        scanf("%d", &opcion);
 			        printf("\n\t__________________________________\n");
 
-			        while(opcion!=1 && opcion!=2 && opcion!=3 && opcion!=4 && opcion!=5 && opcion!=6 &&opcion!=0 && opcion!=7)
+			        while(opcion!=1 && opcion!=2 && opcion!=3 && opcion!=4 && opcion!=5 && opcion!=6 &&opcion!=0 && opcion!=7 && opcion!=8)
 			        {
 			            printf("\n\t***********************************\n");
 			            printf("\tError!!! ingrese una opcion valida:\n");
@@ -64,6 +65,8 @@ int main(void)
 			            printf("\t4.Listar Trabajos  \n");
 			            printf("\t5.Listar Servicios \n");
 			            printf("\t6.Total\n");
+			            printf("\t7.lista bicis hardcodeadas\n");
+			            printf("\t8.Ordenar por marca de bici\n");
 			            printf("\t0.SALIR\n");
 
 
@@ -199,7 +202,23 @@ int main(void)
 			                break;
 
 			            case 7:
-			            	MostrarBicicletas(misBicicletas,5);
+			            	if(banderaIngreso==1)
+			            	{
+			            		MostrarBicicletas(misBicicletas,5);
+
+			            	}
+			            	break;
+
+
+			            case 8:
+			            	if(banderaIngreso==1)
+
+			            	{
+			            		OrdenarPorMarcaBici(trabajito,T);
+			            		MostrarTodosLosTrabajos(trabajito,T,servicios,4);
+			            	}
+
+			            	break;
 
 			        }
 			    }while(opcion!=0);

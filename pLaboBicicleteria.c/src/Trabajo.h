@@ -25,6 +25,9 @@ typedef struct
 
 }eFechas;
 
+
+
+
 typedef struct
 {
 	int idTrabajo;

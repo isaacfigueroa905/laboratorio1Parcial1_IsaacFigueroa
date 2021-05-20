@@ -197,7 +197,7 @@ eFechas IngresarFecha(char mensaje[])
 
 int  MostrarUnTrabajo(eTrabajo unTrabajo, char* descripcionS)
 {
-    printf("\n\%11d  %18s %10d %10s %19d/%d/%d\n",unTrabajo.idTrabajo, unTrabajo.marcaBicicleta,unTrabajo.rodadoBicicleta,descripcionS,
+    printf("\n\%10d  %15s %16d %20s %16d/%d/%d\n",unTrabajo.idTrabajo, unTrabajo.marcaBicicleta,unTrabajo.rodadoBicicleta,descripcionS,
     		                                             unTrabajo.fecha.dia,unTrabajo.fecha.mes,unTrabajo.fecha.anio);
     printf("\t__________________________________________________________________________________________\n");
 
@@ -487,7 +487,7 @@ int MostrarTodosLosTrabajos(eTrabajo unTrabajo[], int tamT,eServicio unServicio[
 	int cantidad = 0;
 	char descripcionServicio[25];
 
-	printf("\n\t ID \t MARCA DE BICI \t\t RODADO \t\tSERVICIO \t\t FECHA\n\n "); //AGREGAR TITULOS DE COLUMNA (QUITAR DE VER QUE NO ES NECESARIO)
+	printf("\n\t ID \t MARCA DE BICI\t\tRODADO\t\tSERVICIO\t\tFECHA\n\n "); //AGREGAR TITULOS DE COLUMNA (QUITAR DE VER QUE NO ES NECESARIO)
 
 	if (unTrabajo != NULL && tamT > 0)
 	{
