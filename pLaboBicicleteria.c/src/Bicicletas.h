@@ -19,7 +19,7 @@
 
 typedef struct
 {
-	int id;
+	int idBici;
 	char marca[25] ;
 	int rodado;
 	char color[25]  ;
@@ -32,6 +32,8 @@ typedef struct
 
 void MostrarBicicletas(eBicicleta listaBicis[], int tamB);
 
+int BuscarBiciPorId(eBicicleta listaBicis[], int tamB, int ID);
 
+int ObtenerDescripcionBici(eBicicleta listaBicis[], int tamB, int buscar, char* descripcionEncontrada);
 
 

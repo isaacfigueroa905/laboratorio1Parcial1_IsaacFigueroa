@@ -6,6 +6,7 @@
  */
 #include "Servicio.h"
 #include "Trabajo.h"
+#include "Bicicletas.h"
 #include <stdio.h>
 #include <string.h>
 #include "inputs.h"
@@ -196,7 +197,7 @@ eFechas IngresarFecha(char mensaje[])
 
 int  MostrarUnTrabajo(eTrabajo unTrabajo, char* descripcionS)
 {
-    printf("\n\%11d  %18s %19d/%d/%d\n",unTrabajo.idTrabajo,descripcionS,
+    printf("\n\%11d  %18s %10d %10s %19d/%d/%d\n",unTrabajo.idTrabajo, unTrabajo.marcaBicicleta,unTrabajo.rodadoBicicleta,descripcionS,
     		                                             unTrabajo.fecha.dia,unTrabajo.fecha.mes,unTrabajo.fecha.anio);
     printf("\t__________________________________________________________________________________________\n");
 
@@ -219,7 +220,7 @@ void Ordenar(eTrabajo listaTrabajos[], int tamT)
 	}
 	else//si son iguales
 	{
-		//OrdenarPorMarcaBici(listaTrabajos,tamT);//ordenar por marca alfabeticamente ascendente
+		OrdenarPorMarcaBici(listaTrabajos,tamT);//ordenar por marca alfabeticamente ascendente
 	}
 
 
@@ -282,6 +283,8 @@ eTrabajo ingreso(eServicio listaServicios[] , int tamS)
 {
 
 		eTrabajo unTrabajo;
+		//eBicicleta unaBici;
+
 
 		char marca[25];
 		int rodado;

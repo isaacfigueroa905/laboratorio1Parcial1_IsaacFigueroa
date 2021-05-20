@@ -6,10 +6,10 @@
  */
 
 
-#include <string.h>
 #include <stdio.h>
 #include "Servicio.h"
 
+#include <string.h>
 #define OCUPADO 1
 #define VACIO 0
 #define ELIMINADO -1

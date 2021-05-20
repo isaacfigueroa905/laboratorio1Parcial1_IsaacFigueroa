@@ -49,6 +49,7 @@ int main(void)
 			        printf("\t4.Listar Trabajos  \n");
 			        printf("\t5.Listar Servicios \n");
 			        printf("\t6.Total\n");
+			        printf("\t7.lista bicis hardcodeadas\n");
 			        printf("\t0.SALIR\n");
 			        scanf("%d", &opcion);
 			        printf("\n\t__________________________________\n");
@@ -73,7 +74,7 @@ int main(void)
 
 			        switch(opcion)
 			        {
-			           /*case 1:
+			           case 1:
 			                banderaIngreso=1;
 			            	printf("\n\t Alta de trabajos:\n");
 			            	retornoCarga=CargarTrabajos(trabajito,T,servicios,4);
@@ -195,7 +196,7 @@ int main(void)
 
 
 
-			                break;*/
+			                break;
 
 			            case 7:
 			            	MostrarBicicletas(misBicicletas,5);

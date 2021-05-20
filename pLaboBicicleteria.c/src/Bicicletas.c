@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include "inputs.h"
 
+#include <string.h>
 
 #define OCUPADO 1
 #define VACIO 0
@@ -19,7 +20,7 @@
 
 int  MostrarUnaBici(eBicicleta unaBici, char* marB)
 {
-    printf("\n\%10d  %18s %10d %10s \n", unaBici.id, unaBici.marca,unaBici.rodado,unaBici.color);
+    printf("\n\%10d  %18s %10d %10s \n", unaBici.idBici, unaBici.marca,unaBici.rodado,unaBici.color);
     printf("\t__________________________________________________________________________________\n");
 
 
@@ -38,7 +39,7 @@ void MostrarBicicletas(eBicicleta listaBicis[], int tamB)
 
     for(i=0;i<tamB;i++)
     {
-    	 printf("\n\%10d  %18s %10d %10s \n ", listaBicis[i] .id, listaBicis[i].marca,listaBicis[i].rodado,listaBicis[i].color);
+    	 printf("\n\%10d  %18s %10d %10s \n ", listaBicis[i] .idBici, listaBicis[i].marca,listaBicis[i].rodado,listaBicis[i].color);
 
 
     }
@@ -63,7 +64,7 @@ int BuscarBiciPorId(eBicicleta listaBicis[], int tamB, int ID)
 		for (i = 0; i < tamB; i++)
 		{
 
-			if (listaBicis[i].id == ID && listaBicis[i].isEmpty == OCUPADO)
+			if (listaBicis[i].idBici == ID && listaBicis[i].isEmpty == OCUPADO)
 			{
 
 				retorno=i;//encontre id
@@ -82,7 +83,7 @@ int ObtenerDescripcionBici(eBicicleta listaBicis[], int tamB, int buscar, char* 
 
 	for(i=0;i<tamB;i++)
 	{
-		if(listaBicis[i].id==buscar&& listaBicis[i].isEmpty==OCUPADO)
+		if(listaBicis[i].idBici==buscar&& listaBicis[i].isEmpty==OCUPADO)
 		{
 			strcpy(descripcionEncontrada,listaBicis[i].marca);
 		}

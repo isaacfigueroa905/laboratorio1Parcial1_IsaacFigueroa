@@ -31,6 +31,7 @@ typedef struct
 	char marcaBicicleta[25] ;
 	int rodadoBicicleta;
 	int idServicio;
+	int idBici;
 	eFechas fecha;
 	int isEmpty;
 
