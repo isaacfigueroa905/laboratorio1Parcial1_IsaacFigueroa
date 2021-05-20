@@ -196,7 +196,7 @@ eFechas IngresarFecha(char mensaje[])
 
 int  MostrarUnTrabajo(eTrabajo unTrabajo, char* descripcionS)
 {
-    printf("\n\%11d %16s %17d  %22s %19d/%d/%d\n",unTrabajo.idTrabajo,unTrabajo.marcaBicicleta, unTrabajo.rodadoBicicleta,descripcionS,
+    printf("\n\%11d  %18s %19d/%d/%d\n",unTrabajo.idTrabajo,descripcionS,
     		                                             unTrabajo.fecha.dia,unTrabajo.fecha.mes,unTrabajo.fecha.anio);
     printf("\t__________________________________________________________________________________________\n");
 
@@ -219,7 +219,7 @@ void Ordenar(eTrabajo listaTrabajos[], int tamT)
 	}
 	else//si son iguales
 	{
-		OrdenarPorMarcaBici(listaTrabajos,tamT);//ordenar por marca alfabeticamente ascendente
+		//OrdenarPorMarcaBici(listaTrabajos,tamT);//ordenar por marca alfabeticamente ascendente
 	}
 
 
@@ -250,8 +250,6 @@ float AcumularGanancia(eServicio listaServicios[],int tamS, eTrabajo listaTrabaj
 {
 	float acumulador=0;
 	int i;
-	//eServicio auxServicio;
-	//int retServ;
 	int j;
 
 
@@ -289,7 +287,7 @@ eTrabajo ingreso(eServicio listaServicios[] , int tamS)
 		int rodado;
 		int retRodado;
 		int codigoIngresado;
-		//int retornoChar;
+
 		int indexRetornado;
 
 
@@ -532,6 +530,12 @@ int CargarTrabajos(eTrabajo listaTrabajos[] , int tamT, eServicio listaServicios
 
 
 }
+
+
+
+
+
+
 
 
 

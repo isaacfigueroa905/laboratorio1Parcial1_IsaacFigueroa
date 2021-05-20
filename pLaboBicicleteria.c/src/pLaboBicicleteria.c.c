@@ -16,11 +16,8 @@
 
 #include "Servicio.h"
 #include "Trabajo.h"
-
-#define T 5
-
-
-
+#include "Bicicletas.h"
+#define T 7
 
 
 
@@ -36,6 +33,7 @@ int main(void)
 		eServicio servicios[4]= {{20000,"limpieza",250,OCUPADO},{20001,"parche",300,OCUPADO},{20002,"centrado",400,OCUPADO},{20003,"cadena",350,OCUPADO}};
 		int banderaIngreso=0;
 		int opcion;
+		eBicicleta misBicicletas[5]  ={{25,"olmo",18,"azul",OCUPADO},{26,"aurora",15,"rojo",OCUPADO},{27,"fiorenza",26,"rojo",OCUPADO},{28,"peugeot",20,"azul",OCUPADO},{29,"aurora", 28, "verde",OCUPADO}};
 
 		InicializadorTrabajos(trabajito,T);
 
@@ -55,7 +53,7 @@ int main(void)
 			        scanf("%d", &opcion);
 			        printf("\n\t__________________________________\n");
 
-			        while(opcion!=1 && opcion!=2 && opcion!=3 && opcion!=4 && opcion!=5 && opcion!=6 &&opcion!=0)
+			        while(opcion!=1 && opcion!=2 && opcion!=3 && opcion!=4 && opcion!=5 && opcion!=6 &&opcion!=0 && opcion!=7)
 			        {
 			            printf("\n\t***********************************\n");
 			            printf("\tError!!! ingrese una opcion valida:\n");
@@ -75,7 +73,7 @@ int main(void)
 
 			        switch(opcion)
 			        {
-			            case 1:
+			           /*case 1:
 			                banderaIngreso=1;
 			            	printf("\n\t Alta de trabajos:\n");
 			            	retornoCarga=CargarTrabajos(trabajito,T,servicios,4);
@@ -197,7 +195,10 @@ int main(void)
 
 
 
-			                break;
+			                break;*/
+
+			            case 7:
+			            	MostrarBicicletas(misBicicletas,5);
 
 			        }
 			    }while(opcion!=0);
@@ -206,6 +207,7 @@ int main(void)
 
 		return EXIT_SUCCESS;
 }
+
 
 
 
